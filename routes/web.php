@@ -17,4 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+// *************** For Vue Route *********************
+
+// Route::get('{path}', 'HomeController@index')->where( 'path', '([A-z\d-\/_.]+)?' );
+Route::get('{path}', 'HomeController@index')->where('path', '.*');
+
 Route::get('/home', 'HomeController@index')->name('home');
